@@ -1,0 +1,8 @@
+[[redirects]]
+  from = "/"
+  to = "/main"
+  status = 200
+  force = false
+  query = {path = ":path"}
+  
+
