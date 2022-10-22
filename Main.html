@@ -8,10 +8,16 @@
     <link rel="stylesheet" href="main.css">
     <title style="font:bold;">Dhrumil's Portfolio</title>
     <link rel="icon" href="DTLogo.jpg">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+    <script src="snowAnimation.js"></script>
+    <script src="typingAnimation.js"></script>
+    <script src="animateCards.js"></script>
 </head>
 <header>
     <div class="navbar">
-        <a class="logo" href="#main"><img src="DTLogo.jpg" alt="logo" class="mainIcon"><p class="mainLogoText">Dhrumil Thakore</p></a>
+        <a class="logo" href="#main">
+            <p class="mainLogoText">Dhrumil Thakore</p>
+        </a>
         <ul class="subNav1">
             <li class="navLinks">
                 <a class="navTitle" href="#about">About</a>
@@ -43,6 +49,11 @@
     <div class="mainText" id="main">
         <img src="coding.gif" class="mainImage">
         <div class="mainTitle">Hi,I'm Dhrumil!</div>
+        <div class="typing-container">
+            <span id="sentence" class="sentence">I'm a </span>
+            <span id="feature-text"></span>
+            <span class="input-cursor"></span>
+        </div>
         <div class="subTitleIcons">
             <a href="https://www.linkedin.com/in/dhrumilthakore/"><img src="linkedin.png" class="icons"></a>
             <a href="https://github.com/dt2811"><img src="github.png" class="icons"></a>
@@ -51,326 +62,364 @@
         <button class="btn">Download Resume</button>
     </div>
     <br />
-    <div class="aboutMe" id="about">
-        <h2 class="titles">About me</h2>
-        <hr>
-        <br />
-        <p class="aboutMePara">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-            has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-            leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
-            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-            software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <div class="container reveal" id="about">
+        <div class="aboutMe">
+            <h2 class="titles">About me</h2>
+            <hr>
+            <br />
+            <p class="aboutMePara">I am Dhrumil Thakore,currently studying in the final year of bachelor of technology in Information Technology from DJ Sanghvi college of engineering,Mumbai.I am a software developer and love to explore different tools to solve real life problems.Throughout my engineering journey I have explored various tools and technology ranging from App development using Java and Flutter,Web development using MERN stack to Machine learning and Deep learning using Python. I am looking to collaborate with people to build some cool projects.</p>
+        </div>
     </div>
     <br />
-    <div class="education" id="edu">
-        <h2 class="titles">Education</h2>
-        <hr>
-        <br />
-        <div class="eduSection">
-            <div class="eduCards">
-                <h3 class="cardTitles">Dwarkadas J. Sanghvi College of Engineering,<span
-                        class="cardTitles1">Mumbai,India</span></h3>
-                <h4 class="cardTitles2">Bachelor of Technology (BTech) - Information Technology</h4>
-                <h4 class="cardTitles2"> August 2019 - Present</h4>
-                <h4 class="cardTitles2">9.32 CGPA</h4>
-
-            </div>
+    <div class="container reveal" id="edu">
+        <div class="education">
+            <h2 class="titles">Education</h2>
+            <hr>
             <br />
-            <div class="eduCards">
-                <h3 class="cardTitles">Pace Junior Science College,<span class="cardTitles1">Mumbai,India</span></h3>
-                <h4 class="cardTitles2">Higher Secondary School Certificate (HSC) </h4>
-                <h4 class="cardTitles2">May 2019</h4>
-                <h4 class="cardTitles2">76.87 %</h4>
+            <div class="eduSection">
+                <div class="eduCards">
+                    <h3 class="cardTitles">Dwarkadas J. Sanghvi College of Engineering,<span
+                            class="cardTitles1">Mumbai,India</span></h3>
+                    <h4 class="cardTitles2">Bachelor of Technology (BTech) - Information Technology</h4>
+                    <h4 class="cardTitles2"> August 2019 - Present</h4>
+                    <h4 class="cardTitles2">9.32 CGPA</h4>
 
-            </div>
-            <br />
-            <div class="eduCards">
-                <h3 class="cardTitles">Lakshdham High School,<span class="cardTitles1">Mumbai,India</span></h3>
-                <h4 class="cardTitles2">Indian Certificate of Secondary Education (ICSE)</h4>
-                <h4 class="cardTitles2">Feb 2017</h4>
-                <h4 class="cardTitles2">88.88 %</h4>
+                </div>
+                <br />
+                <div class="eduCards">
+                    <h3 class="cardTitles">Pace Junior Science College,<span class="cardTitles1">Mumbai,India</span>
+                    </h3>
+                    <h4 class="cardTitles2">Higher Secondary School Certificate (HSC) </h4>
+                    <h4 class="cardTitles2">May 2019</h4>
+                    <h4 class="cardTitles2">76.87 %</h4>
 
+                </div>
+                <br />
+                <div class="eduCards">
+                    <h3 class="cardTitles">Lakshdham High School,<span class="cardTitles1">Mumbai,India</span></h3>
+                    <h4 class="cardTitles2">Indian Certificate of Secondary Education (ICSE)</h4>
+                    <h4 class="cardTitles2">Feb 2017</h4>
+                    <h4 class="cardTitles2">88.88 %</h4>
+
+                </div>
             </div>
         </div>
     </div>
     <br />
-    <div class="experience" id="exp">
-        <h2 class="titles">Experience </h2>
-        <hr>
-        <br />
-        <div class="expSection">
-            <div class="eduCards">
-                <h3 class="cardTitles">Harvard Medical School, <span class="cardTitles1">Massachusetts,USA</span></h3>
-                <h4 class="cardTitles1">Research Developer</h4>
-                <h4 class="cardTitles2">July 2021 - July 2022</h4>
-                <br />
-                <li class="cardTitles3">Built a nonprofit research app and website to help Harvard’s psychologist to
-                    assess patients’ mental health.</li>
-            </div>
+    <div class="container reveal" id="exp">
+        <div class="experience">
+            <h2 class="titles">Experience </h2>
+            <hr>
             <br />
-            <div class="eduCards">
-                <h3 class="cardTitles">Cometa Intellect LLP, <span class="cardTitles1">Odisha,India</span></h3>
-                <h4 class="cardTitles1">App Development Intern</h4>
-                <h4 class="cardTitles2">June 2021 - July 2021</h4>
+            <div class="expSection">
+                <div class="eduCards">
+                    <h3 class="cardTitles">Harvard Medical School, <span class="cardTitles1">Massachusetts,USA</span>
+                    </h3>
+                    <h4 class="cardTitles1">Research Developer</h4>
+                    <h4 class="cardTitles2">July 2021 - July 2022</h4>
+                    <br />
+                    <ul class="cardDescriptions">
+                        <li class="cardTitles3">Worked on technologies like AWS,Flutter,Nodejs and React Js to build
+                            research app and website to help Harvard’s psychologists to monitor patients.</li>
+                        <li class="cardTitles3">Designed architecture that complies with HIPAA.</li>
+                    </ul>
+                </div>
                 <br />
-                <li class="cardTitles3">Worked as Flutter developer to build an eCommerce app farmers.</li>
-            </div>
-            <br />
-            <div class="eduCards">
-                <h3 class="cardTitles">Houz-Review, <span class="cardTitles1">California,USA</span></h3>
-                <h4 class="cardTitles1">Web Development Intern</h4>
-                <h4 class="cardTitles2">December 2020 - April 2021</h4>
+                <div class="eduCards">
+                    <h3 class="cardTitles">Cometa Intellect LLP, <span class="cardTitles1">Odisha,India</span></h3>
+                    <h4 class="cardTitles1">App Development Intern</h4>
+                    <h4 class="cardTitles2">June 2021 - July 2021</h4>
+                    <br />
+                    <ul class="cardDescriptions">
+                        <li class="cardTitles3">Worked as Flutter developer to build an eCommerce app for farmers from
+                            scratch.</li>
+                        <li class="cardTitles3">Integrated Rest Apis in the app.</li>
+                    </ul>
+                </div>
                 <br />
-                <li class="cardTitles3">Worked as a web development intern to build frontend components for property
-                    dealing
-                    website.</li>
+                <div class="eduCards">
+                    <h3 class="cardTitles">Houz-Review, <span class="cardTitles1">California,USA</span></h3>
+                    <h4 class="cardTitles1">Web Development Intern</h4>
+                    <h4 class="cardTitles2">December 2020 - April 2021</h4>
+                    <br />
+                    <ul class="cardDescriptions">
+                        <li class="cardTitles3">Worked as a Web development intern to build frontend components using
+                            React Js for property dealing website.</li>
+                        <li class="cardTitles3">Integrated backend Rest Apis with the front end.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
     <br />
-    <div class="position" id="pos">
-        <h2 class="titles">Position of responsiblities</h2>
-        <hr>
-        <br />
-        <div class="posSection">
+    <br />
+    <div class="container reveal" id="pos">
+        <div class="position">
+            <h2 class="titles">Position of responsiblities</h2>
+            <hr>
+            <br />
+            <div class="posSection">
 
-            <div class="eduCards">
-                <h3 class="cardTitles">Teaching Assitant, <span class="cardTitles1">DJ Sanghvi college of
-                        engineering</span>
-                </h3>
-                <h4 class="cardTitles2">September 2022</h4>
+                <div class="eduCards">
+                    <h3 class="cardTitles">Teaching Assitant, <span class="cardTitles1">DJ Sanghvi college of
+                            engineering</span>
+                    </h3>
+                    <h4 class="cardTitles2">January 2022 - September 2022</h4>
+                    <br />
+                    <li class="cardTitles3">Conducted hands on training for basic Java programing,Python programming and
+                        basic data mining using Python to 200+
+                        students</li>
+                </div>
+                <div class="eduCards">
+                    <h3 class="cardTitles">Mentor and Mentee Club, <span class="cardTitles1">DJ Sanghvi
+                            college
+                            of
+                            engineering</span>
+                    </h3>
+                    <h4 class="cardTitles1">Founder</h4>
+                    <h4 class="cardTitles2">April 2022 - Present</h4>
+                    <br />
+                    <ul class="cardDescriptions">
+                        <li class="cardTitles3">Founded mentor mentee club to help students with their problems.</li>
+                    </ul>
+                </div>
                 <br />
-                <li class="cardTitles3">Taught basic data mining using Python with hands-on training to 100+ students
-                    under the guidance of Dr. Vinaya Sawant</li>
-            </div>
-
-            <br />
-            <div class="eduCards">
-                <h3 class="cardTitles">Teaching Assitant, <span class="cardTitles1">DJ Sanghvi college of
-                        engineering</span>
-                </h3>
-                <h4 class="cardTitles2">April 2022</h4>
+                <div class="eduCards">
+                    <h3 class="cardTitles">Research and Development Club (RND), <span class="cardTitles1">DJ Sanghvi
+                            college
+                            of
+                            engineering</span>
+                    </h3>
+                    <h4 class="cardTitles1">Senior mentor</h4>
+                    <h4 class="cardTitles2">September 2022 - Present</h4>
+                    <br />
+                    <ul class="cardDescriptions">
+                        <li class="cardTitles3">Mentoring a batch of junior students and guiding them to develop
+                            innovative
+                            products.</li>
+                    </ul>
+                </div>
                 <br />
-                <li class="cardTitles3">Taught core Python and Python Tkinter concepts with hands-on training to 100+
-                    students under the guidance of Prof. Prachi Tawde.</li>
-            </div>
-            <br />
-            <div class="eduCards">
-                <h3 class="cardTitles">Teaching Assitant, <span class="cardTitles1">DJ Sanghvi college of
-                        engineering</span>
-                </h3>
-                <h4 class="cardTitles2">January 2022</h4>
-                <br />
-                <li class="cardTitles3">Taught core Java and Java Swing concepts to 100+ students under the guidance of
-                    Prof. Stevina Correia.</li>
-            </div>
-            <br />
-            <div class="eduCards">
-                <h3 class="cardTitles">Research and Development Club (RND), <span class="cardTitles1">DJ Sanghvi college
-                        of
-                        engineering</span>
-                </h3>
-                <h4 class="cardTitles1">Senior mentor</h4>
-                <h4 class="cardTitles2">September 2022 - Present</h4>
-                <br />
-                <li class="cardTitles3">Mentoring a batch of junior students and guiding them to develop innovative
-                    products.</li>
-            </div>
-            <br />
-            <div class="eduCards">
-                <h3 class="cardTitles">Computer Society of India (DJCSI) , <span class="cardTitles1">DJ Sanghvi college
-                        of engineering</span>
-                </h3>
-                <h4 class="cardTitles1">Vice chairperson</h4>
-                <h4 class="cardTitles2">July 2021 - August 2022</h4>
-                <br />
-                <li class="cardTitles3">Co-Lead a team 60 members to conduct various technical events such as national
-                    hackathon called CODESHASTRA 8.0 which received 800+ applications.</li>
+                <div class="eduCards">
+                    <h3 class="cardTitles">Computer Society of India (DJCSI) , <span class="cardTitles1">DJ Sanghvi
+                            college
+                            of engineering</span>
+                    </h3>
+                    <h4 class="cardTitles1">Vice chairperson</h4>
+                    <h4 class="cardTitles2">July 2021 - August 2022</h4>
+                    <br />
+                    <ul class="cardDescriptions">
+                        <li class="cardTitles3">Co-Lead a team 60 members to conduct various technical events such as
+                            national
+                            hackathon called Codeshastra 8.0 which received 800+ applications.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
     <br />
-    <div class="skills" id="skilss">
-        <h2 class="titles">Skills</h2>
-        <hr>
-        <br />
-        <div class="skillSection">
-            <div class="skills1">
-                <h3 class="cardTitles">Languages</h3>
-                <ul>
-                    <li class="cardTitles4">C</li>
-                    <li class="cardTitles4">Java</li>
-                    <li class="cardTitles4">Python</li>
-                    <li class="cardTitles4">Javascript</li>
-                    <li class="cardTitles4">Dart</li>
-                    <li class="cardTitles4">HTML</li>
-                    <li class="cardTitles4">CSS</li>
-                </ul>
-            </div>
-            <div class="skills1">
-                <h3 class="cardTitles">Frameworks and libraries</h3>
-                <ul>
-                    <li class="cardTitles4">React Js</li>
-                    <li class="cardTitles4">Node Js</li>
-                    <li class="cardTitles4">Express Js</li>
-                    <li class="cardTitles4">Django</li>
-                    <li class="cardTitles4">Flutter</li>
-                    <li class="cardTitles4">Android </li>
-                    <li class="cardTitles4">Java swing</li>
-                    <li class="cardTitles4">Python Tkinter</li>
-                    <li class="cardTitles4">Tensorflow</li>
-                    <li class="cardTitles4">Sklearn</li>
-                    <li class="cardTitles4">Numpy</li>
-                    <li class="cardTitles4">Pandas</li>
-                    <li class="cardTitles4">Matplotlib</li>
-                </ul>
-            </div>
-            <div class="skills1">
-                <h3 class="cardTitles">Databases and Software services</h3>
-                <ul>
-                    <li class="cardTitles4">MySQL</li>
-                    <li class="cardTitles4">MongoDb</li>
-                    <li class="cardTitles4">Firebase</li>
-                    <li class="cardTitles4">Amazon web service AWS</li>
-                    <li class="cardTitles4">Heroku</li>
-                    <li class="cardTitles4">Netlify </li>
-                    <li class="cardTitles4">Digital ocean</li>
-                    <li class="cardTitles4">Cpanel</li>
-                    <li class="cardTitles4">Git</li>
-                    <li class="cardTitles4">GitHub</li>
-                    <li class="cardTitles4">Figma</li>
-                </ul>
+    <br />
+    <div class="container reveal" id="skils">
+        <div class="skills">
+            <h2 class="titles">Skills</h2>
+            <hr>
+            <br />
+            <div class="skillSection">
+                <div class="skills1">
+                    <h3 class="cardTitles">Languages</h3>
+                    <ul>
+                        <li class="cardTitles4">C</li>
+                        <li class="cardTitles4">Java</li>
+                        <li class="cardTitles4">Python</li>
+                        <li class="cardTitles4">Javascript</li>
+                        <li class="cardTitles4">Dart</li>
+                        <li class="cardTitles4">HTML</li>
+                        <li class="cardTitles4">CSS</li>
+                    </ul>
+                </div>
+                <div class="skills1">
+                    <h3 class="cardTitles">Frameworks and libraries</h3>
+                    <ul>
+                        <li class="cardTitles4">React Js</li>
+                        <li class="cardTitles4">Node Js</li>
+                        <li class="cardTitles4">Express Js</li>
+                        <li class="cardTitles4">Django</li>
+                        <li class="cardTitles4">Flutter</li>
+                        <li class="cardTitles4">Android </li>
+                        <li class="cardTitles4">Java swing</li>
+                        <li class="cardTitles4">Python Tkinter</li>
+                        <li class="cardTitles4">Tensorflow</li>
+                        <li class="cardTitles4">Sklearn</li>
+                        <li class="cardTitles4">Numpy</li>
+                        <li class="cardTitles4">Pandas</li>
+                        <li class="cardTitles4">Matplotlib</li>
+                    </ul>
+                </div>
+                <div class="skills1">
+                    <h3 class="cardTitles">Databases and Software services</h3>
+                    <ul>
+                        <li class="cardTitles4">MySQL</li>
+                        <li class="cardTitles4">MongoDb</li>
+                        <li class="cardTitles4">Firebase</li>
+                        <li class="cardTitles4">Amazon web service AWS</li>
+                        <li class="cardTitles4">Heroku</li>
+                        <li class="cardTitles4">Netlify </li>
+                        <li class="cardTitles4">Digital ocean</li>
+                        <li class="cardTitles4">Cpanel</li>
+                        <li class="cardTitles4">Git</li>
+                        <li class="cardTitles4">GitHub</li>
+                        <li class="cardTitles4">Figma</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
     <br />
-    <div class="publication" id="pub">
-        <h2 class="titles">Publications</h2>
-        <hr>
-        <br />
-        <div class="pubSection">
-            <div class="eduCards">
-                <h3 class="cardTitles">Federated Machine Learning based Bank Customer Churn Prediction, <span
-                        class="cardTitles1">CRC Press, Taylor & Francis Group</span>
-                </h3>
-                <br />
-                <br />
-                <li class="cardTitles3">Accepted and will be published in the book
-                    “Practical Data Mining Techniques and Applications”</li>
+    <br />
+    <div class="container reveal" id="pub">
+        <div class="publication">
+            <h2 class="titles">Publications</h2>
+            <hr>
+            <br />
+            <div class="pubSection">
+                <div class="eduCards">
+                    <h3 class="cardTitles">Federated Machine Learning based Bank Customer Churn Prediction, <span
+                            class="cardTitles1">CRC Press, Taylor & Francis Group</span>
+                    </h3>
+                    <br />
+                    <br />
+                    <ul class="cardDescriptions">
+                        <li class="cardTitles3">Built a robust Multilayer Perceptron model using the Federated Machine
+                            Learning approach providing an accuracy of 96% for Bank Churn Prediction and solved the
+                            problem of the imbalanced dataset used by upsampling it.</li>
+                        <li class="cardTitles3">Presented a deep analysis of the advantages of Federated Machine
+                            Learning concerning the accuracy, transmission time, and computation cost.</li>
+                        <li class="cardTitles3">Accepted and will be published in the book
+                            “Practical Data Mining Techniques and Applications”</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
     <br />
-    <div class="projects" id="proj">
-        <h2 class="titles">Projects </h2>
-        <hr>
-        <br />
-        <div class="projSection">
-            <div class="eduCards">
-                <img src="Studentportal.png" class="cardImage" alt="Student Portal">
-                <a class="projectCardTitle" href="https://djsce-it-student-portal.netlify.app/" target=”_blank”>Student
-                    Portal</a>
-                <h3 class="projectCardTitles2"> A Student portal website used by the IT department of DJSCE to check
-                    students’
-                    progress in various fields such as sports, academics, etc.</h3>
+    <br />
+    <div class="container reveal" id="proj">
+        <div class="projects">
+            <h2 class="titles">Projects </h2>
+            <hr>
+            <br />
+            <div class="projSection">
+                <div class="eduCards">
+                    <img src="Studentportal.png" class="cardImage" alt="Student Portal">
+                    <a class="projectCardTitle" href="https://djsce-it-student-portal.netlify.app/"
+                        target=”_blank”>Student
+                        Portal</a>
+                    <h3 class="projectCardTitles2"> A Student portal website used by the IT department of DJSCE to check
+                        students’
+                        progress in various fields such as sports, academics, etc.</h3>
 
+                </div>
+                <div class="eduCards">
+                    <img src="Exam.png" class="cardImage" alt="Examination Portal">
+                    <a class="projectCardTitle" href="https://github.com/examination-portal/Exam-Portal-Frontend"
+                        target=”_blank”>Examination Portal</a>
+
+                    <h3 class="projectCardTitles2"> A portal used by the HODs and administration section of the DJSCE to
+                        assign duties for exams and generate reports of the whole process.</h3>
+
+                </div>
+                <div class="eduCards">
+                    <img src="LC Rc.png" class="cardImage" alt="LC RC Portal">
+                    <a class="projectCardTitle" href="https://djsce-college.netlify.app/" target=”_blank”>LC RC
+                        Portal</a>
+
+                    <h3 class="projectCardTitles2"> A portal used by the administration section of the DJSCE to generate
+                        railway concessions and leaving certificates of the students.</h3>
+
+                </div>
             </div>
-            <div class="eduCards">
-                <img src="Exam.png" class="cardImage" alt="Examination Portal">
-                <a class="projectCardTitle" href="https://github.com/examination-portal/Exam-Portal-Frontend"
-                    target=”_blank”>Examination Portal</a>
+            <br />
+            <div class="projSection">
+                <div class="eduCards">
+                    <img src="DJCSI.png" class="cardImage" alt="DJCSI App">
+                    <a class="projectCardTitle"
+                        href="https://play.google.com/store/apps/details?id=com.djcsi.djscecsi&hl=en_IN&gl=US"
+                        target=”_blank”>DJCSI App</a>
 
-                <h3 class="projectCardTitles2"> A portal used by the HODs and administration section of the DJSCE to
-                    assign duties for exams and generate reports of the whole process.</h3>
+                    <h3 class="projectCardTitles2"> An app used by over 1000+ college students. The app is used by
+                        students
+                        to gain knowledge about computer science and get notifications about the various events
+                        organized in
+                        Mumbai related to computer science. This app is also used by students to get railway concessions
+                        in
+                        one click without standing in long queues for hours.</h3>
 
-            </div>
-            <div class="eduCards">
-                <img src="LC Rc.png" class="cardImage" alt="LC RC Portal">
-                <a class="projectCardTitle" href="https://djsce-college.netlify.app/" target=”_blank”>LC RC Portal</a>
-
-                <h3 class="projectCardTitles2"> A portal used by the administration section of the DJSCE to generate
-                    railway concessions and leaving certificates of the students.</h3>
-
-            </div>
-
-
-        </div>
-        <br />
-        <div class="projSection">
-            <div class="eduCards">
-                <img src="DJCSI.png" class="cardImage" alt="DJCSI App">
-                <a class="projectCardTitle"
-                    href="https://play.google.com/store/apps/details?id=com.djcsi.djscecsi&hl=en_IN&gl=US"
-                    target=”_blank”>DJCSI App</a>
-
-                <h3 class="projectCardTitles2"> An app used by over 1000+ college students. The app is used by students
-                    to gain knowledge about computer science and get notifications about the various events organized in
-                    Mumbai related to computer science. This app is also used by students to get railway concessions in
-                    one click without standing in long queues for hours.</h3>
-
-            </div>
-            <div class="eduCards">
-                <img src="Recommendation.png" class="cardImage" alt="Mood based
+                </div>
+                <div class="eduCards">
+                    <img src="Recommendation.png" class="cardImage" alt="Mood based
                 recommendation">
-                <a class="projectCardTitle" href="https://github.com/dt2811/IPD-final" target=”_blank”>Mood based
-                    recommendation
-                    system</a>
+                    <a class="projectCardTitle" href="https://github.com/dt2811/IPD-final" target=”_blank”>Mood based
+                        recommendation
+                        system</a>
 
-                <h3 class="projectCardTitles2">
-                    A website that detects the mood of users using audio and video input and gives personalized
-                    recommendations of music and movies. The emotion detection model was made using CNN with an accuracy
-                    of 89%. The recommendation system was implemented using an ANN bases API called Recombee.</h3>
+                    <h3 class="projectCardTitles2">
+                        A website that detects the mood of users using audio and video input and gives personalized
+                        recommendations of music and movies. The emotion detection model was made using CNN with an
+                        accuracy
+                        of 89%. The recommendation system was implemented using an ANN bases API called Recombee.</h3>
+
+                </div>
+                <div class="eduCards">
+                    <img src="Groove and Move.jpg" class="cardImage" alt="Grove and Move">
+                    <a class="projectCardTitle" href="https://github.com/dt2811/Grove-and-Move" target=”_blank”>Grove
+                        and
+                        Move</a>
+                    <h3 class="projectCardTitles2"> An Flutter based app where in users can listen to music and party
+                        together by making a music room.Users can share music and make playlist too from this app </h3>
+                </div>
 
             </div>
-            <div class="eduCards">
-                <img src="Groove and Move.jpg" class="cardImage" alt="Grove and Move">
-                <a class="projectCardTitle" href="https://github.com/dt2811/Grove-and-Move" target=”_blank”>Grove and
-                    Move</a>
-                <h3 class="projectCardTitles2"> An Flutter based app where in users can listen to music and party
-                    together by making a music room.Users can share music and make playlist too from this app </h3>
-            </div>
-
         </div>
     </div>
 
-
     <br />
-    <div class="talks" id="talks">
-        <h2 class="titles">Talks</h2>
-        <hr>
-        <br />
-        <br />
-        <div class="talkSection">
-            <div class="eduCards">
-                <img src="Talk1.jpeg" class="cardImage" alt="Talk1">
-                <br />
-                <a class="cardTitles">Ideal Roadmap for engineering students <span class="cardTitles1">September
-                        2022</span>
-                </a>
-                <br />
-                <h3 class="projectCardTitles2">
-                    During this session, I explained roadmaps for various job roles and steps to
-                    build an ideal profile for masters to 2nd year students from my college (200+ students).</h3>
+    <br />
+    <div class="container reveal" id="talks">
+        <div class="talks">
+            <h2 class="titles">Talks</h2>
+            <hr>
+            <br />
+            <br />
+            <div class="talkSection">
+                <div class="eduCards">
+                    <img src="Talk1.jpeg" class="cardImage" alt="Talk1">
+                    <br />
+                    <a class="cardTitles">Ideal Roadmap for engineering students <span class="cardTitles1">September
+                            2022</span>
+                    </a>
+                    <br />
+                    <h3 class="projectCardTitles2">
+                        During this session, I explained roadmaps for various job roles and steps to
+                        build an ideal profile for masters to 2nd year students from my college (200+ students).</h3>
 
-            </div>
-            <div class="eduCards">
-                <img src="Talk 2.jpeg" class="cardImage" alt="Talk2">
-                <br />
-                <a class="cardTitles">How to get Internship after 3rd year? <span class="cardTitles1">April
-                        2022</span>
-                </a>
-                <br />
-                <h3 class="projectCardTitles2">
-                    During this session, I interacted with 2nd year students (100+ students)
-                    from my college on how to grab internships after 2nd year, and motivated them by sharing my
-                    journey with them.</h3>
+                </div>
+                <div class="eduCards">
+                    <img src="Talk 2.jpeg" class="cardImage" alt="Talk2">
+                    <br />
+                    <a class="cardTitles">How to get Internship after 3rd year? <span class="cardTitles1">April
+                            2022</span>
+                    </a>
+                    <br />
+                    <h3 class="projectCardTitles2">
+                        During this session, I interacted with 2nd year students (100+ students)
+                        from my college on how to grab internships after 2nd year, and motivated them by sharing my
+                        journey with them.</h3>
 
+                </div>
             </div>
         </div>
         <br />
         <br />
-      
     </div>
 </body>
 

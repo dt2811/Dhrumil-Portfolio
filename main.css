@@ -1,19 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+
 html{
     scroll-behavior: smooth;
+}
+body{
+    background-color: black;
 }
 .logo{
     display: flex;
     flex-direction: row;
     align-items: center;
     text-decoration: none;
+    margin-left: 4%;
    
 }
 .mainLogoText{
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     font-weight: bolder;
-    color: black;
+    color: #FFF;
     text-align: center;
     animation: nameAnimation 5s;
     -webkit-animation: nameAnimation 5s;
@@ -49,8 +54,8 @@ padding-right: 5%;
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    font-weight: 400;
-    color: black;
+    font-weight: bolder;
+    color: #FFF;
 }
 .mainText{
     display: flex;
@@ -67,7 +72,7 @@ padding-right: 5%;
     font-family: 'Inter', sans-serif;
     font-size: 50px;
     font-weight: bolder;
-    color: black;
+    color: #FFF;
     animation: nameAnimation 5s;
     -webkit-animation: nameAnimation 5s;
     -moz-animation: nameAnimation 5s;
@@ -76,11 +81,35 @@ padding-right: 5%;
     animation-iteration-count: infinite;
     
 }
+
+.typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    color: #FFF;
+}
+  #feature-text {
+    margin-left: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    color: #FFF;
+  }
+  .input-cursor {
+    display: inline-block;
+    background-color: white;
+    margin-left: 8px;
+    animation: blink .6s linear infinite alternate;
+  }
 .subTitle{
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 200;
-    color: #1E293B;
+    color: #FFF;
     text-align: start;
    
 }
@@ -95,13 +124,13 @@ padding-right: 5%;
     font-family: 'Inter', sans-serif;
     font-size: 25px;
     font-weight: bold;
-    color: black;
+    color: #FFF;
 }
 .cardTitles{
     font-family: 'Inter', sans-serif;
     font-size: 17px;
     font-weight: bolder;
-    color: #000000;
+    color: #FFF;
     text-align: start;
     margin-top: 0px;
     padding-top: 0px;
@@ -112,7 +141,7 @@ padding-right: 5%;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: bold;
-    color: #1E293B;
+    color: #FFF;
     text-align: start;
     margin-top: 4px;
     padding-top: 0px;
@@ -123,20 +152,23 @@ padding-right: 5%;
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     font-weight: 500;
-    color: #1E293B;
+    color: #FFF;
     text-align: start;
     margin-top: 4px;
     padding-top: 0px;
     padding-bottom: 0px;
     margin-bottom: 0px;
 }
+.cardDescriptions{
+    margin-top: -5px;
+    margin-left: -20px;
+}
 .cardTitles3{
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 500;
-    color: #1E293B;
+    color: #FFF;
     text-align: start;
-    margin-top: -7px;
     padding-top: 0px;
     padding-bottom: 0px;
     margin-bottom: 0px;
@@ -145,7 +177,7 @@ padding-right: 5%;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 500;
-    color: #1E293B;
+    color: #FFF;
     text-align: start;
     font-weight: 600;
     margin-top: 4px;
@@ -158,7 +190,7 @@ padding-right: 5%;
     font-family: 'Inter', sans-serif;
     font-size: 20px;
     font-weight: bold;
-    color: #1E293B;
+    color: #FFF;
     text-align: start;
     margin-top: 15px;
     padding-top: 0px;
@@ -170,7 +202,7 @@ padding-right: 5%;
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 500;
-    color: #1E293B;
+    color: #FFF;
     text-align: start;
     margin-top: 4px;
     padding-top: 0px;
@@ -193,7 +225,7 @@ padding-right: 5%;
 .aboutMePara{
     font-family: 'Inter', sans-serif;
     font-size: 15px;
-    color: #1E293B;
+    color: #FFF;
     font-weight: 400;
 }
 .eduCards{
@@ -206,7 +238,7 @@ padding-right: 5%;
     padding-bottom: 2%;
     border: transparent solid 2px;
     width:80%;
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    box-shadow: 0 3px 10px rgb(226, 221, 221);
 }
 .eduSection{
     display: flex;
@@ -287,19 +319,45 @@ padding-right: 5%;
     background-color: RoyalBlue;
   }
   .navLinks:hover{
-    background-color: azure;
+    background-color: rgb(68, 75, 75);
   }
 .cardImage{
     height: 300px;
     width: 300px;
 }
   
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  
+.reveal.active{
+    opacity: 1;
+    animation: fade-left 0.75s ease-in;
+  }
+  @keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0) translateY(200px);
+      opacity: 1;
+    }
+  }
 @keyframes nameAnimation {
     0% { opacity: 0.25; }
     50%{opacity: 0.75;}
     100% { opacity: 1; }
   }
-  
+  @keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+
   @-moz-keyframes nameAnimation {
     0% { opacity: 0.25; }
     50%{opacity: 0.75;}
@@ -357,12 +415,22 @@ padding-right: 5%;
   }
 
 @media screen and (max-width: 400px){
+    .logo{
+       align-items: flex-end;
+       margin-left: 17%;
+    }
     .cardImage{
         height: 200px;
         width: 200px;
     }
+    .cardTitles3{
+        margin-top: 10px;
+    }
     .mainImage{
         height: 200px;
         width: 200px;
+    }
+    .eduCards{
+        margin-top: 5%;
     }
 }
