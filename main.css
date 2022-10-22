@@ -319,7 +319,7 @@ padding-right: 5%;
     background-color: RoyalBlue;
   }
   .navLinks:hover{
-    background-color: rgb(68, 75, 75);
+    text-decoration: underline white 2px;
   }
 .cardImage{
     height: 300px;
